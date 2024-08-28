@@ -11,7 +11,7 @@ int main() {
     int mat1[100][3]; 
 
     printf("Enter elements of matrix 1 : \n");
-    for (int i = 0; i < numNonZero1; i++) {
+    for (int i = 1; i < numNonZero1; i++) {
         scanf("%d %d %d", &mat1[i][0], &mat1[i][1], &mat1[i][2]);
     }
 
@@ -20,7 +20,7 @@ int main() {
     int mat2[100][3]; 
 
     printf("Enter elements of matrix 2: \n");
-    for (int i = 0; i < numNonZero2; i++) {
+    for (int i = 1; i < numNonZero2; i++) {
         scanf("%d %d %d", &mat2[i][0], &mat2[i][1], &mat2[i][2]);
     }
 

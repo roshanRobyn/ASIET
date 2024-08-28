@@ -10,7 +10,7 @@ int main() {
     scanf("%d", &numNonZero1);
     int mat1[100][3]; 
 
-    printf("Enter non-zero elements of matrix 1 (row col value): \n");
+    printf("Enter elements of matrix 1 : \n");
     for (int i = 0; i < numNonZero1; i++) {
         scanf("%d %d %d", &mat1[i][0], &mat1[i][1], &mat1[i][2]);
     }
@@ -19,7 +19,7 @@ int main() {
     scanf("%d", &numNonZero2);
     int mat2[100][3]; 
 
-    printf("Enter non-zero elements of matrix 2 (row col value): \n");
+    printf("Enter elements of matrix 2: \n");
     for (int i = 0; i < numNonZero2; i++) {
         scanf("%d %d %d", &mat2[i][0], &mat2[i][1], &mat2[i][2]);
     }

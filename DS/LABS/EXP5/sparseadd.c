@@ -1,117 +1,60 @@
 #include <stdio.h>
 
-int main()
-{
-    int i, j, r, c, r1, c1, k = 0, n = 0, n2 = 0;
-    int a[100][100], b[100][100];
-    int T1[100][3], T2[100][3], R[100][3];
+int main() {
+    int rows, cols, numNonZero1, numNonZero2;
     printf("ROSHAN ROBIN ROLLNO52 S3CSAI\n");
+    printf("Enter number of rows and columns: ");
+    scanf("%d %d", &rows, &cols);
 
-    printf("Enter the number of rows of the First matrix: ");
-    scanf("%d", &r);
-    printf("Enter the number of columns of the First matrix: ");
-    scanf("%d", &c);
-    printf("Enter the number of rows of the second matrix: ");
-    scanf("%d", &r1);
-    printf("Enter the number of columns of the second matrix: ");
-    scanf("%d", &c1);
+    printf("Enter number of non-zero elements in matrix 1: ");
+    scanf("%d", &numNonZero1);
+    int mat1[100][3]; 
 
-    if (r != r1 || c != c1) {
-        printf("Error: Matrices must be of the same dimensions for addition.\n");
-        return 1;
+    printf("Enter non-zero elements of matrix 1 (row col value): \n");
+    for (int i = 0; i < numNonZero1; i++) {
+        scanf("%d %d %d", &mat1[i][0], &mat1[i][1], &mat1[i][2]);
     }
 
-    printf("Enter the First matrix elements:\n");
-    for (i = 0; i < r; i++) {
-        for (j = 0; j < c; j++) {
-            scanf("%d", &a[i][j]);
-        }
+    printf("Enter number of non-zero elements in matrix 2: ");
+    scanf("%d", &numNonZero2);
+    int mat2[100][3]; 
+
+    printf("Enter non-zero elements of matrix 2 (row col value): \n");
+    for (int i = 0; i < numNonZero2; i++) {
+        scanf("%d %d %d", &mat2[i][0], &mat2[i][1], &mat2[i][2]);
     }
 
-    printf("Enter the second matrix elements:\n");
-    for (i = 0; i < r1; i++) {
-        for (j = 0; j < c1; j++) {
-            scanf("%d", &b[i][j]);
-        }
+    int result[200][3]; 
+    int k = 0;
+
+    for (int i = 0; i < numNonZero1; i++) {
+        result[k][0] = mat1[i][0];
+        result[k][1] = mat1[i][1];
+        result[k][2] = mat1[i][2];
+        k++;
     }
 
-    k = 1;
-    for (i = 0; i < r; i++) {
-        for (j = 0; j < c; j++) {
-            if (a[i][j] != 0) {
-                T1[k][0] = i;
-                T1[k][1] = j;
-                T1[k][2] = a[i][j];
-                k++;
-                n++;
+    for (int i = 0; i < numNonZero2; i++) {
+        int found = 0;
+        for (int j = 0; j < numNonZero1; j++) {
+            if (mat2[i][0] == mat1[j][0] && mat2[i][1] == mat1[j][1]) {
+                result[k-1][2] += mat2[i][2];
+                found = 1;
+                break;
             }
         }
-    }
-    
-    T1[0][0] = r;
-    T1[0][1] = c;
-    T1[0][2] = n;
-
-    k = 1;
-    for (i = 0; i < r1; i++) {
-        for (j = 0; j < c1; j++) {
-            if (b[i][j] != 0) {
-                T2[k][0] = i;
-                T2[k][1] = j;
-                T2[k][2] = b[i][j];
-                k++;
-                n2++;
-            }
+        if (!found) {
+            result[k][0] = mat2[i][0];
+            result[k][1] = mat2[i][1];
+            result[k][2] = mat2[i][2];
+            k++;
         }
     }
-    T2[0][0] = r1;
-    T2[0][1] = c1;
-    T2[0][2] = n2;
 
-    
-    k = 0;
-    int p1 = 1, p2 = 1;
-
-    while (p1 <= n && p2 <= n2) {
-        if (T1[p1][0] == T2[p2][0] && T1[p1][1] == T2[p2][1]) {
-            R[k][0] = T1[p1][0];
-            R[k][1] = T1[p1][1];
-            R[k][2] = T1[p1][2] + T2[p2][2];
-            p1++;
-            p2++;
-        } else if (T1[p1][0] < T2[p2][0] || (T1[p1][0] == T2[p2][0] && T1[p1][1] < T2[p2][1])) {
-            R[k][0] = T1[p1][0];
-            R[k][1] = T1[p1][1];
-            R[k][2] = T1[p1][2];
-            p1++;
-        } else {
-            R[k][0] = T2[p2][0];
-            R[k][1] = T2[p2][1];
-            R[k][2] = T2[p2][2];
-            p2++;
-        }
-        k++;
+    printf("Resulting sparse matrix: \n");
+    for (int i = 0; i < k; i++) {
+        printf("(%d, %d, %d)\n", result[i][0], result[i][1], result[i][2]);
     }
 
-
-    while (p1 <= n) {
-        R[k][0] = T1[p1][0];
-        R[k][1] = T1[p1][1];
-        R[k][2] = T1[p1][2];
-        p1++;
-        k++;
-    }
-
-    while (p2 <= n2) {
-        R[k][0] = T2[p2][0];
-        R[k][1] = T2[p2][1];
-        R[k][2] = T2[p2][2];
-        p2++;
-        k++;
-    }
-
-    printf("The Sparse matrix representation of the Resultant matrix is:\n");
-    printf("Row\tColumn\tValue\n");
-    for (i = 0; i < k; i++) {
-        printf("%d\t%d\t%d\n", R[i][0], R[i][1], R[i][2]);
-    }
+    return 0;
+}

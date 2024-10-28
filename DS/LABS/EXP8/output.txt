@@ -1,0 +1,3 @@
+administrator@si-53:~/roshanrobin52$ ./a.out
+Enter the Infix Expression: a+b+c*d-e
+The Postfix Expression is: ab+cd*+e-

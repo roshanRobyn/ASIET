@@ -1,0 +1,109 @@
+student@dl-21:~/roshanrobin$ gedit stackLL.c
+student@dl-21:~/roshanrobin$ gcc stackLL.c
+student@dl-21:~/roshanrobin$ ./a.out
+Pushed 40 onto the stack.
+Pushed 96 onto the stack.
+Pushed 58 onto the stack.
+Pushed 96 onto the stack.
+Pushed 14 onto the stack.
+
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 1
+Enter a value to push: 34
+Pushed 34 onto the stack.
+
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 3
+Top element is 34
+
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 2
+Popped the top element from the stack.
+
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 3
+Top element is 14
+
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 2
+Popped the top element from the stack.
+
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 2
+Popped the top element from the stack.
+
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 2
+Popped the top element from the stack.
+
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 2
+Popped the top element from the stack.
+
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 2
+Popped the top element from the stack.
+
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 2
+
+Stack Underflow
+Popped the top element from the stack.
+
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 3
+
+Stack is empty
+Menu:
+1. Push
+2. Pop
+3. View Top Element
+4. Exit
+Enter your choice: 4
+Exiting...
+student@dl-21:~/roshanrobin$ 
+

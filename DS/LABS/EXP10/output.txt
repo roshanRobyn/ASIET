@@ -1,0 +1,112 @@
+student@dl-21:~/roshanrobin$ gcc queueLL.c
+student@dl-21:~/roshanrobin$ ./a.out
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      1
+Enter value to enqueue: 34
+Enqueued 34
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      1
+Enter value to enqueue: 23
+Enqueued 23
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      1
+Enter value to enqueue: 22
+Enqueued 22
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      1
+Enter value to enqueue: 56
+Enqueued 56
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      3
+Front element: 34
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      4
+Rear element: 56
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      2
+Dequeued from queue
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      3
+Front element: 23
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      4
+Rear element: 56
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      2
+Dequeued from queue
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      2
+Dequeued from queue
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      2
+Dequeued from queue
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      2
+Queue Underflow
+Dequeued from queue
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      2
+Queue Underflow
+Dequeued from queue
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      3
+Queue is empty
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      4
+Queue is empty
+
+Queue Operations:
+1. Enqueue	 2. Dequeue	 3. Get Front
+4. Get Rear	 5. Exit
+ Enter your choice:      5
+Program executed successfully. 
+student@dl-21:~/roshanrobin$ 
+

@@ -1,0 +1,72 @@
+student@dl-21:~/roshanrobin$ gedit graphtrav.c
+student@dl-21:~/roshanrobin$ gcc graphtrav.c
+student@dl-21:~/roshanrobin$ ./a.out
+Menu:
+1. Add Edge
+2. Remove Edge
+3. BFS Traversal
+4. DFS Traversal
+5. Exit
+Enter your choice: 1
+Enter source and destination vertices (e.g., 0 1): 0 1
+Menu:
+1. Add Edge
+2. Remove Edge
+3. BFS Traversal
+4. DFS Traversal
+5. Exit
+Enter your choice: 1
+Enter source and destination vertices (e.g., 0 1): 1 2
+Menu:
+1. Add Edge
+2. Remove Edge
+3. BFS Traversal
+4. DFS Traversal
+5. Exit
+Enter your choice: 1
+Enter source and destination vertices (e.g., 0 1): 1 3
+Menu:
+1. Add Edge
+2. Remove Edge
+3. BFS Traversal
+4. DFS Traversal
+5. Exit
+Enter your choice: 1
+Enter source and destination vertices (e.g., 0 1): 3 4
+Menu:
+1. Add Edge
+2. Remove Edge
+3. BFS Traversal
+4. DFS Traversal
+5. Exit
+Enter your choice: 1
+Enter source and destination vertices (e.g., 0 1): 4 5
+Menu:
+1. Add Edge
+2. Remove Edge
+3. BFS Traversal
+4. DFS Traversal
+5. Exit
+Enter your choice: 3
+Enter starting vertex for BFS: 0
+BFS Traversal starting from vertex 0:
+0 1 3 2 4 5 
+Menu:
+1. Add Edge
+2. Remove Edge
+3. BFS Traversal
+4. DFS Traversal
+5. Exit
+Enter your choice: 4
+Enter starting vertex for DFS: 0
+DFS Traversal starting from vertex 0:
+0 1 3 4 5 2 
+Menu:
+1. Add Edge
+2. Remove Edge
+3. BFS Traversal
+4. DFS Traversal
+5. Exit
+Enter your choice: 5
+student@dl-21:~/roshanrobin$ 
+

@@ -1,0 +1,133 @@
+student@dl-21:~/roshanrobin$ gcc impleLLops.c
+student@dl-21:~/roshanrobin$ ./a.out
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 1
+Enter data to insert at beginning: 45
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 7
+Linked List: 45 -> NULL
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 1
+Enter data to insert at beginning: 67
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 1
+Enter data to insert at beginning: 34
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 1
+Enter data to insert at beginning: 78
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 7
+Linked List: 78 -> 34 -> 67 -> 45 -> NULL
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 3
+Enter data to insert: 11
+Enter the value after which to insert: 34
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 7
+Linked List: 78 -> 34 -> 11 -> 67 -> 45 -> NULL
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 2
+Enter data to insert at end: 
+41
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 7
+Linked List: 78 -> 34 -> 11 -> 67 -> 45 -> 41 -> NULL
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 
+4
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 5
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 7
+Linked List: 34 -> 11 -> 67 -> 45 -> NULL
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 6
+Enter the value after which to delete: 67
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 7
+Linked List: 34 -> 11 -> 67 -> NULL
+
+Menu:
+1. Insert at Beginning		2. Insert at End
+3. Insert Between Values	4. Delete from Beginning
+5. Delete from End		6. Delete After Value
+7. Display List			8. Exit
+Enter your choice: 8
+student@dl-21:~/roshanrobin$ ^C
+student@dl-21:~/roshanrobin$ 
+

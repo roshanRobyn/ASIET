@@ -1,6 +1,6 @@
 class test
 {
-	protected void finalize()
+	protected void finaliz()
 	{
 		System.out.println("Object is garbage collected");
 	}

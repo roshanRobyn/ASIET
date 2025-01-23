@@ -1,0 +1,132 @@
+student@dl-21:~$ cd roshappi
+student@dl-21:~/roshappi$ gedit syscallpgm.c
+student@dl-21:~/roshappi$ gcc syscallpgm.c
+syscallpgm.c: In function ‘main’:
+syscallpgm.c:11:17: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+   11 |                 exit(0);
+      |                 ^~~~
+syscallpgm.c:5:1: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+    4 | #include <sys/wait.h>
+  +++ |+#include <stdlib.h>
+    5 | void main(){
+syscallpgm.c:11:17: warning: incompatible implicit declaration of built-in function ‘exit’ [-Wbuiltin-declaration-mismatch]
+   11 |                 exit(0);
+      |                 ^~~~
+syscallpgm.c:11:17: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+syscallpgm.c:12:9: error: ‘else’ without a previous ‘if’
+   12 |         else if (pid==0){
+      |         ^~~~
+syscallpgm.c:13:24: warning: too many arguments for format [-Wformat-extra-args]
+   13 |                 printf("child process id=",getpid());
+      |                        ^~~~~~~~~~~~~~~~~~~
+syscallpgm.c:15:17: warning: implicit declaration of function ‘excel’; did you mean ‘execl’? [-Wimplicit-function-declaration]
+   15 |                 excel("/bin/date","date",NULL);
+      |                 ^~~~~
+      |                 execl
+syscallpgm.c:16:9: error: ‘else’ without a previous ‘if’
+   16 |         else {
+      |         ^~~~
+syscallpgm.c:17:24: warning: too many arguments for format [-Wformat-extra-args]
+   17 |                 printf("parent process id=",getppid());
+      |                        ^~~~~~~~~~~~~~~~~~~~
+student@dl-21:~/roshappi$ gedit syscallpgm.c
+student@dl-21:~/roshappi$ gcc syscallpgm.c
+syscallpgm.c: In function ‘main’:
+syscallpgm.c:13:9: error: ‘else’ without a previous ‘if’
+   13 |         else if (pid==0){
+      |         ^~~~
+student@dl-21:~/roshappi$ gedit syscallpgm.c
+student@dl-21:~/roshappi$ gcc syscallpgm.c
+syscallpgm.c: In function ‘main’:
+syscallpgm.c:13:9: error: ‘else’ without a previous ‘if’
+   13 |         else if (pid==0){
+      |         ^~~~
+syscallpgm.c:17:10: error: expected ‘(’ before ‘{’ token
+   17 |          {
+      |          ^
+      |          (
+student@dl-21:~/roshappi$ gcc syscallpgm.c
+syscallpgm.c: In function ‘main’:
+syscallpgm.c:13:9: error: ‘else’ without a previous ‘if’
+   13 |         else if (pid==0){
+      |         ^~~~
+syscallpgm.c:17:10: error: expected ‘(’ before ‘{’ token
+   17 |          {
+      |          ^
+      |          (
+student@dl-21:~/roshappi$ gedit syscallpgm.c
+student@dl-21:~/roshappi$ gcc syscallpgm.c
+student@dl-21:~/roshappi$ ./a.out
+parent process id=4565
+child process id= 4566
+student@dl-21:~/roshappi$ Thursday 23 January 2025 10:15:41 AM IST
+gedit syscallpgm.c
+student@dl-21:~/roshappi$ ./a.out
+parent process id=4609
+child process id= 4610
+student@dl-21:~/roshappi$ Thursday 23 January 2025 10:17:38 AM IST
+student@dl-21:~/roshappi$ gedit dir.c
+student@dl-21:~/roshappi$ gedit syscallpgm.c
+student@dl-21:~/roshappi$ gedit syscallpgm.c
+student@dl-21:~/roshappi$ gcc syscallpgm.c
+student@dl-21:~/roshappi$ ./a.out
+child process id= 7468
+Thursday 23 January 2025 10:24:40 AM IST
+parent process id=7467
+child process createdstudent@dl-21:~/roshappi$ gedit dir.c
+student@dl-21:~/roshappi$ gedit file.c
+student@dl-21:~/roshappi$ gedit dir.c
+student@dl-21:~/roshappi$ gcc dir.c
+dir.c: In function ‘main’:
+dir.c:13:31: error: ‘struct dirent’ has no member named ‘d’
+   13 |         printf("%ld\t%s\n",ptr->d-ino,ptr->d_name);
+      |                               ^~
+dir.c:13:35: error: ‘ino’ undeclared (first use in this function); did you mean ‘int’?
+   13 |         printf("%ld\t%s\n",ptr->d-ino,ptr->d_name);
+      |                                   ^~~
+      |                                   int
+dir.c:13:35: note: each undeclared identifier is reported only once for each function it appears in
+student@dl-21:~/roshappi$ gedit dir.c
+student@dl-21:~/roshappi$ gcc dir.c
+student@dl-21:~/roshappi$ ./a.out
+enter the directory name:something
+6687914	..
+6688243	.
+6688314	roshan
+student@dl-21:~/roshappi$ gedit file.c
+student@dl-21:~/roshappi$ gedit file.txt
+student@dl-21:~/roshappi$ gcc file.c
+file.c:3:10: fatal error: sys/type.h: No such file or directory
+    3 | #include <sys/type.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+student@dl-21:~/roshappi$ gedit file.txt
+student@dl-21:~/roshappi$ gcc file.c
+file.c:3:10: fatal error: sys/type.h: No such file or directory
+    3 | #include <sys/type.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+student@dl-21:~/roshappi$ gedit file.c
+student@dl-21:~/roshappi$ gcc file.c
+student@dl-21:~/roshappi$ ./a.out
+enter the text to be written:roshappi
+student@dl-21:~/roshappi$ gedit file.c
+^C  
+student@dl-21:~/roshappi$ gcc file.c
+file.c: In function ‘main’:
+file.c:18:37: error: expected ‘;’ before ‘read’
+   18 |         printf("THE CONTENTS AR:\n")
+      |                                     ^
+      |                                     ;
+   19 |         read(fd2,rbuff,100);
+      |         ~~~~                         
+student@dl-21:~/roshappi$ gedit file.c
+student@dl-21:~/roshappi$ gcc file.c
+student@dl-21:~/roshappi$ ./a.out
+enter the text to be written:roshapppppiii
+THE CONTENTS AR:
+roshapppppiii
+student@dl-21:~/roshappi$ gedit syscallpgm.c
+^C
+student@dl-21:~/roshappi$ 
+

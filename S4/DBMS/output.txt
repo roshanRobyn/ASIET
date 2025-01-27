@@ -1,0 +1,576 @@
+
+
+SQL*Plus: Release 10.2.0.1.0 - Production on Mon Jan 27 09:48:08 2025
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+SQL> connect 
+Enter user-name: System
+Enter password: 
+Connected.
+SQL> set serveroutput om;
+SP2-0265: serveroutput must be set ON or OFF
+SQL> set serveroutput on;
+SQL> @oracleRoshan.sql                                    
+SP2-0310: unable to open file "oracleRoshan.sql"
+SQL> @roshan.oracleRoshan.sql                                  
+SP2-0310: unable to open file "roshan.oracleRoshan.sql"
+SQL> @roshan.sql
+
+Table created.
+
+SQL> @roshan.sql
+
+Table created.
+
+SQL> @roshan.sql
+
+Table created.
+
+SQL> @roshan.sql
+Enter value for salesman_id: 001  
+Enter value for name: ronn
+Enter value for city: kochi
+Enter value for commission: 0.22
+old   2: values (&salesman_id,'&name','&city',&commission)
+new   2: values (001,'ronn','kochi',0.22)
+
+1 row created.
+
+SQL> /   
+Enter value for salesman_id: 002 
+Enter value for name: rosh 
+Enter value for city: kldy 
+Enter value for commission: 0.33
+old   2: values (&salesman_id,'&name','&city',&commission)
+new   2: values (002,'rosh','kldy',0.33)
+
+1 row created.
+
+SQL> /
+Enter value for salesman_id: 003
+Enter value for name: rcha
+Enter value for city: edply
+Enter value for commission: 0.22
+old   2: values (&salesman_id,'&name','&city',&commission)
+new   2: values (003,'rcha','edply',0.22)
+
+1 row created.
+
+SQL> @roshan.sql
+Enter value for ord_no: 101
+Enter value for purch_amt: 300
+Enter value for ord_date: 12-jan-2025
+Enter value for cust_id: 201
+Enter value for salesman_id: 001
+old   2: values (&ord_no,&purch_amt,'&ord_date',&cust_id,&salesman_id)
+new   2: values (101,300,'12-jan-2025',201,001)
+
+1 row created.
+
+SQL> /
+Enter value for ord_no: 102 
+Enter value for purch_amt: 1000
+Enter value for ord_date: 14-feb-2025
+Enter value for cust_id: 202
+Enter value for salesman_id: 001
+old   2: values (&ord_no,&purch_amt,'&ord_date',&cust_id,&salesman_id)
+new   2: values (102,1000,'14-feb-2025',202,001)
+
+1 row created.
+
+SQL> /
+Enter value for ord_no: 103
+Enter value for purch_amt: 900
+Enter value for ord_date: 15-mar-2025
+Enter value for cust_id: 203
+Enter value for salesman_id: 002
+old   2: values (&ord_no,&purch_amt,'&ord_date',&cust_id,&salesman_id)
+new   2: values (103,900,'15-mar-2025',203,002)
+
+1 row created.
+
+SQL> /
+Enter value for ord_no: 104
+Enter value for purch_amt: 20-mar-2025
+Enter value for ord_date: l
+Enter value for cust_id: l
+Enter value for salesman_id: l
+old   2: values (&ord_no,&purch_amt,'&ord_date',&cust_id,&salesman_id)
+new   2: values (104,20-mar-2025,'l',l,l)
+values (104,20-mar-2025,'l',l,l)
+                              *
+ERROR at line 2:
+ORA-00984: column not allowed here
+
+
+SQL> /   
+Enter value for ord_no: 104
+Enter value for purch_amt: 600
+Enter value for ord_date: 20-mar-2025
+Enter value for cust_id: 204 
+Enter value for salesman_id: 003
+old   2: values (&ord_no,&purch_amt,'&ord_date',&cust_id,&salesman_id)
+new   2: values (104,600,'20-mar-2025',204,003)
+
+1 row created.
+
+SQL> @roshan.sql
+Enter value for cust_id: 201
+Enter value for cust_name: shashi
+Enter value for city: kochi
+Enter value for grade: 3
+Enter value for salesman_id: 001
+old   2: values (&cust_id,'&cust_name','&city','&grade',&salesman_id)
+new   2: values (201,'shashi','kochi','3',001)
+
+1 row created.
+
+SQL> /
+Enter value for cust_id: 202
+Enter value for cust_name: soman
+Enter value for city: kochi
+Enter value for grade: 4
+Enter value for salesman_id: 001
+old   2: values (&cust_id,'&cust_name','&city','&grade',&salesman_id)
+new   2: values (202,'soman','kochi','4',001)
+
+1 row created.
+
+SQL> /   
+Enter value for cust_id: 203
+Enter value for cust_name: shishu
+Enter value for city: kldy
+Enter value for grade: 1
+Enter value for salesman_id: 002
+old   2: values (&cust_id,'&cust_name','&city','&grade',&salesman_id)
+new   2: values (203,'shishu','kldy','1',002)
+
+1 row created.
+
+SQL> /
+Enter value for cust_id: 204
+Enter value for cust_name: edply
+Enter value for city: ekm
+Enter value for grade: 6
+Enter value for salesman_id: 003
+old   2: values (&cust_id,'&cust_name','&city','&grade',&salesman_id)
+new   2: values (204,'edply','ekm','6',003)
+
+1 row created.
+
+SQL> @roshan.sql         
+
+SALESMAN_ID NAME  COMMISSION
+----------- ----- ----------
+	  1 ronn	 .22
+	  2 rosh	 .33
+	  3 rcha	 .22
+
+SQL> @roshan.sql
+select ord_date,salesman_id,ord_name,purch_amt from orderR
+                                                    *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> @roshan.sql
+select ord_date,salesman_id,ord_name,purch_amt from ordersR
+                            *
+ERROR at line 1:
+ORA-00904: "ORD_NAME": invalid identifier
+
+
+SQL> @roshan.sql
+
+ORD_DATE SALESMAN_ID	 ORD_NO  PURCH_AMT
+-------- ----------- ---------- ----------
+12-01-25	   1	    101        300
+14-02-25	   1	    102       1000
+15-03-25	   2	    103        900
+20-03-25	   3	    104        600
+
+SQL> @roshan.sql
+
+SALESMAN_ID
+-----------
+	  1
+	  2
+	  3
+
+SQL> @roshan.sql
+select name from salesmanR where city="kochi"
+                                      *
+ERROR at line 1:
+ORA-00904: "kochi": invalid identifier
+
+
+SQL> @roshan.sql
+
+NAME
+-----
+ronn
+
+SQL> @roshan.sql
+
+   CUST_ID CUST_NAME	   CITY  G SALESMAN_ID
+---------- --------------- ----- - -----------
+       204 edply	   ekm	 6	     3
+
+SQL> @roshan.sql
+SQL> @roshab.sql
+SP2-0310: unable to open file "roshab.sql"
+SQL> @roshan.sql
+
+    ORD_NO ORD_DATE  PURCH_AMT
+---------- -------- ----------
+       101 12-01-25	   300
+       102 14-02-25	  1000
+
+SQL> @roshan.sql
+
+Table created.
+
+SQL> @roshan.sql
+Enter value for year: 1969
+Enter value for subject: maths
+Enter value for country: USA
+Enter value for cat: sctst
+old   2: values (&year,'&subject','&country','&cat')
+new   2: values (1969,'maths','USA','sctst')
+
+1 row created.
+
+SQL> /
+Enter value for year: 2000
+Enter value for subject: eng  
+Enter value for country: IND
+Enter value for cat: wrtr
+old   2: values (&year,'&subject','&country','&cat')
+new   2: values (2000,'eng','IND','wrtr')
+
+1 row created.
+
+SQL> /   
+Enter value for year: 1984
+Enter value for subject: physics
+Enter value for country: SWD
+Enter value for cat: sctst
+old   2: values (&year,'&subject','&country','&cat')
+new   2: values (1984,'physics','SWD','sctst')
+
+1 row created.
+
+SQL> /   
+Enter value for year: 1999
+Enter value for subject: chemistry
+Enter value for country: GRM
+Enter value for cat: sctst
+old   2: values (&year,'&subject','&country','&cat')
+new   2: values (1999,'chemistry','GRM','sctst')
+
+1 row created.
+
+SQL> /
+Enter value for year: 2023
+Enter value for subject: eng
+Enter value for country: IND
+Enter value for cat: wrtr
+old   2: values (&year,'&subject','&country','&cat')
+new   2: values (2023,'eng','IND','wrtr')
+
+1 row created.
+
+SQL> @roshan.sql
+Enter value for year: dsfdfsghsdhdg
+Enter value for subject: sdfhshsd
+Enter value for country: dhsdfhsdfhdg
+Enter value for cat: sdhsdghsdfh
+old   2: values (&year,'&subject','&country','&cat')
+new   2: values (dsfdfsghsdhdg,'sdfhshsd','dhsdfhsdfhdg','sdhsdghsdfh')
+values (dsfdfsghsdhdg,'sdfhshsd','dhsdfhsdfhdg','sdhsdghsdfh')
+        *
+ERROR at line 2:
+ORA-00984: column not allowed here
+
+
+SQL> @roshan.sql
+alter table nobel_win add(winner char(15))
+                          *
+ERROR at line 1:
+ORA-01430: column being added already exists in table
+
+
+SQL> select * from nobel_win
+  2  ;
+
+no rows selected
+
+SQL> @roshan.sql
+alter table novSel_win add(winner char(15))
+*
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> @roshan.sql
+
+Table altered.
+
+SQL> drop table novel_win;
+
+Table dropped.
+
+SQL> @roshan.sql
+
+Table created.
+
+SQL> @roshan.sql
+Enter value for winner: roshan
+Enter value for year: 1970
+Enter value for subject: lit
+Enter value for country: IND
+Enter value for cat: wrtr
+old   2: values ('&winner',&year,'&subject','&country','&cat')
+new   2: values ('roshan',1970,'lit','IND','wrtr')
+
+1 row created.
+
+SQL> /   
+Enter value for winner: robin
+Enter value for year: 1971
+Enter value for subject: math
+Enter value for country: USA
+Enter value for cat: sctst
+old   2: values ('&winner',&year,'&subject','&country','&cat')
+new   2: values ('robin',1971,'math','USA','sctst')
+
+1 row created.
+
+SQL> @roshan.sql
+
+WINNER
+---------------
+robin
+
+SQL> @roshan.sql
+Enter value for winner: mark
+Enter value for year: 1999
+Enter value for subject: physics
+Enter value for country: SWD
+Enter value for cat: sctst
+old   2: values ('&winner',&year,'&subject','&country','&cat')
+new   2: values ('mark',1999,'physics','SWD','sctst')
+
+1 row created.
+
+SQL> @roshan.sql
+
+      YEAR SUBJECT
+---------- ----------
+      1999 physics
+
+SQL> @roshan.sql
+Enter value for winner: ronn
+Enter value for year: 1969
+Enter value for subject: physics 
+Enter value for country: SA
+Enter value for cat: sctst
+old   2: values ('&winner',&year,'&subject','&country','&cat')
+new   2: values ('ronn',1969,'physics','SA','sctst')
+
+1 row created.
+
+SQL> @roshan.sql
+
+WINNER
+---------------
+mark
+ronn
+
+SQL> @roshan.sql
+Enter value for winner: mick
+Enter value for year: 1968
+Enter value for subject: chemistry 
+Enter value for country: IND
+Enter value for cat: sctst
+old   2: values ('&winner',&year,'&subject','&country','&cat')
+new   2: values ('mick',1968,'chemistry','IND','sctst')
+
+1 row created.
+
+SQL> /
+Enter value for winner: lily
+Enter value for year: !970
+Enter value for subject: chemistry
+Enter value for country: USA
+Enter value for cat: sctst
+old   2: values ('&winner',&year,'&subject','&country','&cat')
+new   2: values ('lily',!970,'chemistry','USA','sctst')
+values ('lily',!970,'chemistry','USA','sctst')
+               *
+ERROR at line 2:
+ORA-00936: missing expression
+
+
+SQL> /
+Enter value for winner: lily
+Enter value for year: 1970
+Enter value for subject: chemistry
+Enter value for country: USA
+Enter value for cat: sctst
+old   2: values ('&winner',&year,'&subject','&country','&cat')
+new   2: values ('lily',1970,'chemistry','USA','sctst')
+
+1 row created.
+
+SQL> @roshan.sql
+
+      YEAR SUBJECT    WINNER	      COU
+---------- ---------- --------------- ---
+      1970 lit	      roshan	      IND
+      1971 math       robin	      USA
+      1969 physics    ronn	      SA
+      1968 chemistry  mick	      IND
+      1970 chemistry  lily	      USA
+
+SQL> @roshan.sql
+
+      YEAR SUBJECT    WINNER	      COU
+---------- ---------- --------------- ---
+      1968 chemistry  mick	      IND
+      1970 chemistry  lily	      USA
+
+SQL> @roshan.sql
+
+      YEAR SUBJECT    WINNER
+---------- ---------- ---------------
+      1999 physics    mark
+
+SQL> @roshan.sql
+SQL> @roshan.sql
+SQL> @roshan.sql
+SQL> @roshan.sql
+SQL> @roshan.sql
+
+WINNER		      YEAR SUBJECT    COU CAT
+--------------- ---------- ---------- --- -----
+robin		      1971 math       USA sctst
+ronn		      1969 physics    SA  sctst
+
+SQL> @roshan.sqk     
+SP2-0310: unable to open file "roshan.sqk"
+SQL> @roshan.sql
+
+WINNER		      YEAR SUBJECT    COU CAT
+--------------- ---------- ---------- --- -----
+roshan		      1970 lit	      IND wrtr
+mark		      1999 physics    SWD sctst
+
+SQL> @roshan.sql
+
+WINNER		      YEAR SUBJECT    COU CAT
+--------------- ---------- ---------- --- -----
+mick		      1968 chemistry  IND sctst
+roshan		      1970 lit	      IND wrtr
+lily		      1970 chemistry  USA sctst
+robin		      1971 math       USA sctst
+
+SQL> @roshan.sql
+Enter value for winner: ^C  
+Enter value for year: ^C^C^C
+Enter value for subject: 
+Enter value for country: 
+Enter value for cat: 
+old   2: values ('&winner',&year,'&subject','&country','&cat')
+new   2: values ('',,'','','')
+values ('',,'','','')
+           *
+ERROR at line 2:
+ORA-00936: missing expression
+
+
+
+SQL> 
+SQL> @roshan.sql
+
+Table created.
+
+SQL> @roshan.sql
+Enter value for pid: 1
+Enter value for pprice: 200
+Enter value for pname: pencil
+old   2: values (&pid,&pprice,'&pname')
+new   2: values (1,200,'pencil')
+insert into novel_win
+            *
+ERROR at line 1:
+ORA-00947: not enough values
+
+
+SQL> @roshan.sql
+Enter value for pid: 1
+Enter value for pprice: 200
+Enter value for pname: pencil
+old   2: values (&pid,&pprice,'&pname')
+new   2: values (1,200,'pencil')
+values (1,200,'pencil')
+              *
+ERROR at line 2:
+ORA-12899: value too large for column "SYSTEM"."PRODUCTSR"."PNAME" (actual: 6,
+maximum: 5)
+
+
+SQL> /   
+Enter value for pid: 1
+Enter value for pprice: 200
+Enter value for pname: pen
+old   2: values (&pid,&pprice,'&pname')
+new   2: values (1,200,'pen')
+
+1 row created.
+
+SQL> /
+Enter value for pid: 2
+Enter value for pprice: 300
+Enter value for pname: scl
+old   2: values (&pid,&pprice,'&pname')
+new   2: values (2,300,'scl')
+
+1 row created.
+
+SQL> /
+Enter value for pid: 3
+Enter value for pprice: 400
+Enter value for pname: car
+old   2: values (&pid,&pprice,'&pname')
+new   2: values (3,400,'car')
+
+1 row created.
+
+SQL> @roshan.sql
+
+MINIMUM_PRICE
+-------------
+	  200
+
+SQL> @roshan.sql
+
+MINIMUM_PRICE
+-------------
+	  400
+
+SQL> @roshan.sql
+
+TOTAL_NO_PRODUCTS
+-----------------
+		3
+
+SQL> @roshan.sql
+
+SUM_OF_PRICES AVG_OF_PRICES
+------------- -------------
+	  900		300
+
+SQL> ^C
+
